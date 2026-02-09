@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartWinter</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+    <div id="root"></div>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script type="text/babel">
+        const App = () => {
+            return (
+                <div className="h-screen flex flex-col items-center justify-center bg-gray-100">
+                    <header className="bg-blue-500 text-white p-4 text-3xl font-bold mb-4">
+                        SmartWinter
+                    </header>
+                    <main className="flex flex-col items-center justify-center">
+                        <h2 className="text-2xl font-bold mb-4">Cechy:</h2>
+                        <ul className="list-none mb-4">
+                            <li className="text-xl font-bold mb-2">Prognoza pogody</li>
+                            <li className="text-xl font-bold mb-2">Kontrola ogrzewania</li>
+                            <li className="text-xl font-bold mb-2">Alerty</li>
+                        </ul>
+                        <div className="flex flex-row justify-center mb-4">
+                            <div className="bg-blue-500 h-10 w-10 mr-2"></div>
+                            <div className="bg-gray-100 h-10 w-10"></div>
+                        </div>
+                    </main>
+                </div>
+            );
+        };
+
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<App />);
+    </script>
+</body>
+</html>
